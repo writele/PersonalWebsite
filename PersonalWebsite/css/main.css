@@ -1,0 +1,11 @@
+.sidebar-menu {
+    background-color: #709E8F;
+}
+
+.main-navigation li a.active {
+    background: #232635;
+}
+
+.main-navigation li a:hover {
+    background: #476B71;
+}
