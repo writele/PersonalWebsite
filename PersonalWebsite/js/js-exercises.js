@@ -166,14 +166,13 @@ function factorialProgram() {
 runProgram(".factorial-btn", factorialProgram);
 
 /* Fizzbuzz */
-
 var fbNumberInput1;
 var fbNumberInput2;
 var fizzbuzzOutput;
-var numbers = [];
+var fbNumbers = [];
 
 for (var i = 1; i <= 100; i++) {
-    numbers.push(i);
+    fbNumbers.push(i);
 }
 
 function fizzbuzz(number1, number2, arr) {
@@ -194,12 +193,12 @@ function fizzbuzz(number1, number2, arr) {
     }
 }
 
-function getValues() {
+function getFBValues() {
     fbNumberInput1 = getValue("fb-number1");
     fbNumberInput2 = getValue("fb-number2");
 }
 
-function isValid(number) {
+function isValidFB(number) {
     if (!isNaN(number) && number > 0 && number <= 100) {
         return true;
     }
@@ -210,9 +209,9 @@ function isValid(number) {
 
 function fizzbuzzProgram() {
     clearOutput("#fizzbuzzOutput");
-    getValues();
-    if (isValid(numberInput1) && isValid(numberInput2)) {
-        fizzbuzz(numberInput1, numberInput2, numbers);
+    getFBValues();
+    if (isValidFB(fbNumberInput1) && isValidFB(fbNumberInput2)) {
+        fizzbuzz(fbNumberInput1, fbNumberInput2, fbNumbers);
     }
     else {
         appendOutput("#fizzbuzzOutput", "<p>There's been an error. Please make sure you've entered two numbers, each between 1 and 100!</p>")

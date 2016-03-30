@@ -101,9 +101,8 @@
                 <div class="page-section" id="projects">
                     <div class="row">
                         <div class="col-md-12">
-                            <h4 class="widget-title">Portfolio</h4>
                             <div class="content-section">
-                                <p>Check out some of my projects below, and feel free to visit my <a href="https://github.com/writele">Github</a>.</p>
+                                <p>Click on an image below to view an exercise. These exercises share a few <a href="" data-toggle="modal" data-target="#shared">common functions</a>.</p>
                             </div>
                         </div>
                     </div>
@@ -208,7 +207,6 @@ var number3;
 var number4;
 var number5;
 var numbers = [];
-
 function calculateLeastNumber(arr) {
     return Math.min.apply(Math, arr);
 }
@@ -217,22 +215,22 @@ function calculateGreatestNumber(arr) {
 }
 function calculateMeanNumber(arr) {
     var mean = 0;
-    for (var i=0, arrLength = arr.length; i < arrLength; i++) {
+    for (var i = 0, arrLength = arr.length; i < arrLength; i++) {
         mean += arr[i];
     }
     return mean / arrLength;
 }
 function calculateSumNumber(arr) {
     var sum = 0;
-    for (var i=0, arrLength = arr.length; i < arrLength; i++) {
-    sum += arr[i];
+    for (var i = 0, arrLength = arr.length; i < arrLength; i++) {
+        sum += arr[i];
     }
     return sum;
 }
 function calculateProductNumber(arr) {
     var product = 1;
-    for (var i=0, arrLength = arr.length; i < arrLength; i++) {
-    product *= arr[i];
+    for (var i = 0, arrLength = arr.length; i < arrLength; i++) {
+        product *= arr[i];
     }
     return product;
 }
@@ -314,7 +312,7 @@ runProgram(".statistics-btn", statisticsProgram);
                                             <h4>Enter A Number</h4>
                                             <form id="NumberInput" action="#" method="post">
                                                 <label for="fac-number">Number:</label>
-                                                <input type="number" id="fac-number" name="number1" value="" />
+                                                <input type="number" id="fac-number" name="fac-number" value="" />
                                                 <br>
                                                 <input type="submit" value="Calculate" class="factorial-btn">
                                             </form>
@@ -390,12 +388,12 @@ runProgram(".factorial-btn", factorialProgram);
                                     <div class="row">
                                         <div class="col-md-9 modal-code">
                                             <pre class="brush: js">
-var numberInput1;
-var numberInput2;
+var fbNumberInput1;
+var fbNumberInput2;
 var fizzbuzzOutput;
-var numbers = [];
+var fbNumbers = [];
 for (var i = 1; i <= 100; i++) {
-    numbers.push(i);
+    fbNumbers.push(i);
 }
 function fizzbuzz(number1, number2, arr) {
     for (var i = 0, arrLength = arr.length; i < arrLength; i++) {
@@ -414,11 +412,11 @@ function fizzbuzz(number1, number2, arr) {
         appendOutput("#fizzbuzzOutput", "<br>");
     }
 }
-function getValues() {
-    numberInput1 = getValue("fb-number1");
-    numberInput2 = getValue("fb-number2");
+function getFBValues() {
+    fbNumberInput1 = getValue("fb-number1");
+    fbNumberInput2 = getValue("fb-number2");
 }
-function isValid(number) {
+function isValidFB(number) {
     if (!isNaN(number) && number > 0 && number <= 100) {
         return true;
     }
@@ -428,9 +426,9 @@ function isValid(number) {
 }
 function fizzbuzzProgram() {
     clearOutput("#fizzbuzzOutput");
-    getValues();
-    if (isValid(numberInput1) && isValid(numberInput2)) {
-        fizzbuzz(numberInput1, numberInput2, numbers);
+    getFBValues();
+    if (isValidFB(fbNumberInput1) && isValidFB(fbNumberInput2)) {
+        fizzbuzz(fbNumberInput1, fbNumberInput2, fbNumbers);
     }
     else {
         appendOutput("#fizzbuzzOutput", "<p>There's been an error. Please make sure you've entered two numbers, each between 1 and 100!</p>")
@@ -502,6 +500,53 @@ function palindromeProgram() {
     appendOutput("#palindromeOutput", "<p>" + wordOutput + "</p>");
 }
 runProgram(".palindrome-btn", palindromeProgram);
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-body col-sm-12">
+                            </div>
+                            <div class="modal-footer no-margin">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="shared" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h1 class="modal-title" id="myModalLabel">Shared Functions</h1>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-9 modal-code">
+                                            <pre class="brush: js">
+function getValue(id) {
+    var value = document.getElementById(id).value;
+    return value;
+}
+function isValid(number) {
+    if (!isNaN(number) && number !== "") {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+function appendOutput(element, variable) {
+    $(element).append(variable);
+}
+function clearOutput(element) {
+    $(element).html("");
+}
+function runProgram(element, program) {
+    $(element).on("click", function (event) {
+        event.preventDefault();
+        program();
+    });
+}
                                             </pre>
                                         </div>
                                     </div>
