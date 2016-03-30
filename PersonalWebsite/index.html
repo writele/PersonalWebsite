@@ -19,6 +19,10 @@
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/templatemo-style.css">
         <link rel="stylesheet" href="css/main.css">
+
+        <link href='https://fonts.googleapis.com/css?family=Merriweather:700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
+
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
@@ -31,9 +35,6 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="top-section">
-                            <div class="profile-image">
-                                <img src="img/profile.jpg" alt="Volton">
-                            </div>
                             <div class="profile-content">
                                 <h3 class="profile-title">Eleanor Palmer</h3>
                                 <p class="profile-description">Web Developer</p>
@@ -41,13 +42,14 @@
                         </div>
                     </div>
                 </div>
-                <a href="#" class="toggle-menu"><i class="fa fa-bars"></i></a>
+                <a href="#" class="toggle-menu">Menu</a>
                 <div class="main-navigation responsive-menu">
                     <ul class="navigation">
-                        <li><a href="#top"><i class="fa fa-home"></i>Home</a></li>
-                        <li><a href="#about"><i class="fa fa-user"></i>About</a></li>
-                        <li><a href="#projects"><i class="fa fa-newspaper-o"></i>Portfolio</a></li>
-                        <li><a href="#contact"><i class="fa fa-envelope"></i>Contact</a></li>
+                        <li><a href="#top"><i class="fa fa-globe"></i>Welcome</a></li>
+                        <li><a href="#about"><i class="fa fa-pencil"></i>About</a></li>
+                        <li><a href="#projects"><i class="fa fa-desktop"></i>Portfolio</a></li>
+                        <li><a href="#resume"><i class="fa fa-file-o"></i>Resume</a></li>
+                        <li><a href="#contact"><i class="fa fa-comment"></i>Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -56,9 +58,6 @@
         <!-- SIDEBAR -->
         <div class="sidebar-menu hidden-xs hidden-sm">
             <div class="top-section">
-                <div class="profile-image">
-                    <img src="img/profile.jpg" alt="Volton">
-                </div>
                 <h3 class="profile-title">Eleanor Palmer</h3>
                 <p class="profile-description">Web Developer</p>
             </div> <!-- top-section -->
@@ -66,18 +65,15 @@
                 <ul class="navigation">
                     <li><a href="#top"><i class="fa fa-globe"></i>Welcome</a></li>
                     <li><a href="#about"><i class="fa fa-pencil"></i>About</a></li>
-                    <li><a href="#projects"><i class="fa fa-paperclip"></i>Portfolio</a></li>
-                    <li><a href="#contact"><i class="fa fa-link"></i>Contact</a></li>
+                    <li><a href="#projects"><i class="fa fa-desktop"></i>Portfolio</a></li>
+                    <li><a href="#resume"><i class="fa fa-file-o"></i>Resume</a></li>
+                    <li><a href="#contact"><i class="fa fa-comment"></i>Contact</a></li>
                 </ul>
             </div> <!-- .main-navigation -->
             <div class="social-icons">
                 <ul>
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
-                    <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/eleanorpalmer"><i class="fa fa-linkedin"><span>LinkedIn</span></i></a></li>
+                    <li><a href="https://github.com/writele"><i class="fa fa-github"><span>Github</span></i></a></li>
                 </ul>
             </div> <!-- .social-icons -->
         </div> <!-- .sidebar-menu -->
@@ -100,11 +96,15 @@
                     <div class="page-section" id="about">
                     <div class="row">
                         <div class="col-md-12">
-                            <h4 class="widget-title">Learn About Me</h4>
+                            <h4 class="widget-title">Who I Am</h4>
                             <div class="about-image">
-                                <img src="img/about.jpg" alt="about me">
+                                <img src="img/about-img.jpg" alt="about me">
                             </div>
-                            <p>Volton is free <a rel="nofollow" href="http://www.templatemo.com/page/1">responsive mobile template</a> from <span class="blue">template</span><span class="green">mo</span> website. You can use this template for any purpose. Please tell your friends about it. Thank you. Credit goes to <a rel="nofollow" href="http://unsplash.com">Unsplash</a> for images used in this design. You can <strong>change menu icons</strong> by checking <a rel="nofollow" href="http://fontawesome.info/font-awesome-icon-world-map/">Font Awesome</a> (version 4). Example: <strong>&lt;i class=&quot;fa fa-camera&quot;&gt;&lt;/i&gt;</strong></p>
+                            <div class="content-section">
+                                <p>My goal is to solve problems and communicate ideas in the best way possible. My background in psychology research makes me uniquely suited for work in web development and social science research. I build websites and analyze problems through keen attention to detail, all the while never losing sight of the big picture. </p>
+                                <br />
+                                <p>I will be available for full-time work and freelance projects starting June 20, 2016. </p>
+                            </div>
                             <hr>
                         </div>
                     </div> <!-- #about -->
@@ -114,9 +114,11 @@
                     <div class="page-section" id="projects">
                     <div class="row">
                         <div class="col-md-12">
-                            <h4 class="widget-title">PHOTOS OF WHAT I DO</h4>
-                            <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Maecenas et lorem molestie, maximus justo dignissim, cursus nisl. Nullam at ante quis ex pharetra pulvinar quis id dolor. Integer lorem odio, euismod ut sem sit amet, imperdiet condimentum diam.</p>
-                        </div>
+                            <h4 class="widget-title">Portfolio</h4>
+                            <div class="content-section">
+                                <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Maecenas et lorem molestie, maximus justo dignissim, cursus nisl. Nullam at ante quis ex pharetra pulvinar quis id dolor. Integer lorem odio, euismod ut sem sit amet, imperdiet condimentum diam.</p>
+                            </div>
+                            </div>
                     </div>
                     <div class="row projects-holder">
                         <div class="col-md-4 col-sm-6">
@@ -189,13 +191,63 @@
                     </div>
                     <hr>
 
+                    <!-- RESUME -->
+                    <div class="page-section" id="resume">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h4 class="widget-title">Resume</h4>
+                                <div class="resume-section">
+                                    <h5>Education</h5>
+                                    <p><strong>Wake Forest University</strong> (2012-2014)</p>
+                                    <p>M.A., Psychology</p>
+                                    <br />
+                                    <p><strong>St. Edward's University</strong> (2008-2012)</p>
+                                    <p>B.A., Psychology</p>
+                                </div>
+                                <div class="resume-section">
+                                    <h5>Experience</h5>
+                                    <p><strong>Administrative Assistant</strong> (2015 - 2016)</p>
+                                    <p>Second Harvest Food Bank, Winston-Salem, NC</p>
+                                    <ul>
+                                        <li>Operated switchboard, answered phone calls and checked in partner agencies.</li>
+                                        <li>Performed data entry and completed financial ledgers.</li>
+                                        <li>Ordered and tracked office supplies.</li>
+                                    </ul>
+                                    <p><strong>Freelance Web Developer</strong> (March 2015 – Present)</p>
+                                    <p>Self-Employed, Winston-Salem, NC</p>
+                                    <ul>
+                                        <li>Build and design websites for clients, primarily using Wordpress.</li>
+                                        <li>Edit graphics with Photoshop and modify CSS file.</li> 
+                                        <li>Create website backups and troubleshoot web services.</li>
+                                    </ul>
+                                    <p><strong>Research Assistant</strong> (Aug. 2012 – May 2014)</p>
+                                    <p>Wake Forest University, Winston-Salem, NC</p>
+                                    <ul>
+                                        <li>Performed literature reviews and determined research methodology for independent research projects.</li>
+                                        <li>Coded experiments using Inquisit and MediaLab software.</li>
+                                        <li>Completed IRB paperwork and proofread project documents.</li>
+                                        <li>Administered consent forms and experiments to participants.</li>
+                                        <li>Analyzed data in SPSS. Presented findings to graduate department.</li>
+                                    </ul>
+                                </div>         
+                                    <button class="btn resume-link"><a href="#"><i class="fa fa-file-pdf-o"></i>PDF Resume</a></button>
+                                    <button class="btn resume-link"><a href="https://www.linkedin.com/in/eleanorpalmer"><i class="fa fa-linkedin"></i>LinkedIn</a></button>
+                                </ul>     
+
+                                <hr>
+                            </div>
+                        </div> <!-- #resume -->
+                    </div>
+
                     <!-- CONTACT -->
                     <div class="page-section" id="contact">
                     <div class="row">
                         <div class="col-md-12">
-                            <h4 class="widget-title">PLACE TO TALK WITH ME</h4>
-                            <p>Vestibulum ac iaculis erat, in semper dolor. Maecenas et lorem molestie, maximus justo dignissim, cursus nisl. Nullam at ante quis ex pharetra pulvinar quis id dolor. Integer lorem odio, euismod ut sem sit amet, imperdiet condimentum diam.</p>
-                        </div>
+                            <h4 class="widget-title">Contact Me</h4>
+                            <div class="content-section">
+                                <p>Vestibulum ac iaculis erat, in semper dolor. Maecenas et lorem molestie, maximus justo dignissim, cursus nisl. Nullam at ante quis ex pharetra pulvinar quis id dolor. Integer lorem odio, euismod ut sem sit amet, imperdiet condimentum diam.</p>
+                            </div>
+                            </div>
                     </div>
                     <div class="row">
                         <form action="#" method="post" class="contact-form">
@@ -212,7 +264,7 @@
                                 <textarea name="message" id="message" cols="30" rows="6" placeholder="Leave your message..."></textarea>
                             </fieldset>
                             <fieldset class="col-md-12 col-sm-12">
-                                <input type="submit" class="button big default" value="Send Message">
+                                <input type="submit" class="btn resume-link" value="Send Message">
                             </fieldset>
                         </form>
                     </div> <!-- .contact-form -->
@@ -221,7 +273,7 @@
 
                     <div class="row" id="footer">
                         <div class="col-md-12 text-center">
-                            <p class="copyright-text">Copyright &copy; 2084 Company Name</p>
+                            <p class="copyright-text">Copyright &copy; 2016 Eleanor Palmer</p>
                         </div>
                     </div>
 
