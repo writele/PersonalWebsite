@@ -393,10 +393,10 @@ h3.profile-title {
     padding: 10px;
   }
   .main-navigation a.active {
-    background: #5f6d7e !important;
+    background: #5f6d7e;
   }
   .main-navigation a:hover {
-    background: #5f6d7e !important;
+    background: #5f6d7e;
   }
 }
 

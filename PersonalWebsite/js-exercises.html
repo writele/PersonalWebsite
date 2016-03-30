@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="css/templatemo-style.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/js-exercises.css">
+    <link href="Content/SyntaxHighlighter/shCore.css" rel="stylesheet" />
+    <link href="Content/SyntaxHighlighter/shThemeDefault.css" rel="stylesheet" />
 
     <link href='https://fonts.googleapis.com/css?family=Merriweather:700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
@@ -95,7 +97,7 @@
 
             <div class="content-wrapper">
 
-                <!-- PROJECTS -->
+                <!-- EXERCISES -->
                 <div class="page-section" id="projects">
                     <div class="row">
                         <div class="col-md-12">
@@ -106,67 +108,45 @@
                         </div>
                     </div>
                     <div class="row projects-holder">
-                        <div class="col-md-4 col-sm-6">
+                        <div class="col-md-6">
                             <div class="project-item">
                                 <img src="img/1.jpg" alt="">
                                 <div class="project-hover">
                                     <div class="inside">
-                                        <h5><a href="#">Pellentesque porta ligula</a></h5>
+                                        <h5><a href="" data-toggle="modal" data-target="#stats">Simple Statistics</a></h5>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam cursus</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6">
+                        <div class="col-md-6">
                             <div class="project-item">
                                 <img src="img/2.jpg" alt="">
                                 <div class="project-hover">
                                     <div class="inside">
-                                        <h5><a href="#">Pellentesque porta ligula</a></h5>
+                                        <h5><a href="" data-toggle="modal" data-target="#factorial">Factorial Calculator</a></h5>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam cursus</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6">
+                        <div class="col-md-6">
                             <div class="project-item">
                                 <img src="img/3.jpg" alt="">
                                 <div class="project-hover">
                                     <div class="inside">
-                                        <h5><a href="#">Pellentesque porta ligula</a></h5>
+                                        <h5><a href="" data-toggle="modal" data-target="#fizzbuzz">FizzBuzz</a></h5>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam cursus.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-6">
+                        <div class="col-md-6">
                             <div class="project-item">
                                 <img src="img/4.jpg" alt="">
                                 <div class="project-hover">
                                     <div class="inside">
-                                        <h5><a href="#">Pellentesque porta ligula</a></h5>
-                                        <p>Quisque mattis sit amet dolor eu scelerisque. Vivamus bibendum massa et nisl tempus commodo.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="project-item">
-                                <img src="img/5.jpg" alt="">
-                                <div class="project-hover">
-                                    <div class="inside">
-                                        <h5><a href="#">Pellentesque porta ligula</a></h5>
-                                        <p>Quisque mattis sit amet dolor eu scelerisque. Vivamus bibendum massa et nisl tempus commodo.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="project-item">
-                                <img src="img/6.jpg" alt="">
-                                <div class="project-hover">
-                                    <div class="inside">
-                                        <h5><a href="#">Pellentesque porta ligula</a></h5>
+                                        <h5><a href="" data-toggle="modal" data-target="#palindrome">Palindrome</a></h5>
                                         <p>Quisque mattis sit amet dolor eu scelerisque. Vivamus bibendum massa et nisl tempus commodo.</p>
                                     </div>
                                 </div>
@@ -175,8 +155,365 @@
                     </div> <!-- .projects-holder -->
                 </div>
                 <hr>
+                <div class="modal fade" id="stats" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h1 class="modal-title" id="myModalLabel">Simple Statistics</h1>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-6 input">
+                                            <h4>Enter Some Numbers</h4>
+                                            <form id="NumberInput" action="#" method="post">
+                                                <label for="number1">Number:</label>
+                                                <input type="number" id="number1" name="number1" value="" />
+                                                <br />
+                                                <label for="number2">Number:</label>
+                                                <input type="number" id="number2" name="number2" value="" />
+                                                <br />
+                                                <label for="number3">Number:</label>
+                                                <input type="number" id="number3" name="number3" value="" />
+                                                <br />
+                                                <label for="number4">Number:</label>
+                                                <input type="number" id="number4" name="number4" value="" />
+                                                <br />
+                                                <label for="number5">Number:</label>
+                                                <input type="number" id="number5" name="number5" value="" />
+                                                <br>
+                                                <input type="submit" value="Calculate" class="statistics-btn">
+                                            </form>
+                                        </div>
+                                        <div class="col-md-6 output">
+                                            <h4>Statistics</h4>
+                                            <p>Least: <span id="least"></span></p>
+                                            <p>Greatest: <span id="greatest"></span></p>
+                                            <p>Mean: <span id="mean"></span></p>
+                                            <p>Sum: <span id="sum"></span></p>
+                                            <p>Product: <span id="product"></span></p>
+                                            <p><span id="error"></span></p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-9 modal-code">
+                                            <pre class="brush: js">
+var greatestNumber;
+var leastNumber;
+var meanNumber;
+var productNumber;
+var sumNumber;
+var number1;
+var number2;
+var number3;
+var number4;
+var number5;
+var numbers = [];
 
+function calculateLeastNumber(arr) {
+    return Math.min.apply(Math, arr);
+}
+function calculateGreatestNumber(arr) {
+    return Math.max.apply(Math, arr);
+}
+function calculateMeanNumber(arr) {
+    var mean = 0;
+    for (var i=0, arrLength = arr.length; i < arrLength; i++) {
+        mean += arr[i];
+    }
+    return mean / arrLength;
+}
+function calculateSumNumber(arr) {
+    var sum = 0;
+    for (var i=0, arrLength = arr.length; i < arrLength; i++) {
+    sum += arr[i];
+    }
+    return sum;
+}
+function calculateProductNumber(arr) {
+    var product = 1;
+    for (var i=0, arrLength = arr.length; i < arrLength; i++) {
+    product *= arr[i];
+    }
+    return product;
+}
+function getValues() {
+    number1 = getValue("number1");
+    number2 = getValue("number2");
+    number3 = getValue("number3");
+    number4 = getValue("number4");
+    number5 = getValue("number5");
+}
+function pushValuestoArray() {
+    numbers.push(Number(number1));
+    numbers.push(Number(number2));
+    numbers.push(Number(number3));
+    numbers.push(Number(number4));
+    numbers.push(Number(number5));
+}
+function clearValues() {
+    numbers = [];
+}
+function setOutput() {
+    leastNumber = calculateLeastNumber(numbers);
+    greatestNumber = calculateGreatestNumber(numbers);
+    meanNumber = calculateMeanNumber(numbers);
+    sumNumber = calculateSumNumber(numbers);
+    productNumber = calculateProductNumber(numbers);
+}
+function clearOutputNumbers() {
+    clearOutput("span#error");
+    clearOutput("span#least");
+    clearOutput("span#greatest");
+    clearOutput("span#mean");
+    clearOutput("span#sum");
+    clearOutput("span#product");
+}
+function appendOutputNumbers() {
+    appendOutput("span#least", leastNumber);
+    appendOutput("span#greatest", greatestNumber);
+    appendOutput("span#mean", meanNumber);
+    appendOutput("span#sum", sumNumber);
+    appendOutput("span#product", productNumber);
+}
+function statisticsProgram() {
+    clearOutputNumbers();
+    getValues();
+    pushValuestoArray();
+    setOutput();
+    if (isValid(number1) && isValid(number2) && isValid(number3) && isValid(number4) && isValid(number5)) {
+        appendOutputNumbers();
+    }
+    else {
+        appendOutput("span#error", "<p>There's been an error. Please make sure you've entered valid numbers.</p>")
+    }
+    clearValues();
+}
+runProgram(".statistics-btn", statisticsProgram);
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-body col-sm-12">
+                            </div>
+                            <div class="modal-footer no-margin">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="factorial" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h1 class="modal-title" id="myModalLabel">      </h1>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-6 input">
+                                            <h4>Enter A Number</h4>
+                                            <form id="NumberInput" action="#" method="post">
+                                                <label for="fac-number">Number:</label>
+                                                <input type="number" id="fac-number" name="number1" value="" />
+                                                <br>
+                                                <input type="submit" value="Calculate" class="factorial-btn">
+                                            </form>
+                                        </div>
+                                        <div class="col-md-6 output">
+                                            <h4>Factorial</h4>
+                                            <p id="factorialOutput">
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-9 modal-code">
+                                            <pre class="brush: js">
+var factorialInput;
+var factorialOutput;
+function factorialize(factorial) {
+    var result = 1;
+    for (var i = factorial; i > 0; i--) {
+        result *= i;
+    }
+    return result;
+}
+function factorialProgram() {
+    clearOutput("p#factorialOutput");
+    factorialInput = getValue("number1");
+    factorialOutput = factorialize(factorialInput);
+    if (isValid(factorialInput)) {
+        appendOutput("p#factorialOutput", factorialOutput);
+    }
+    else {
+        appendOutput("p#factorialOutput", "There's been an error. Please make sure you've entered a valid number.")
+    }
+};
+runProgram(".factorial-btn", factorialProgram);
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-body col-sm-12">
+                            </div>
+                            <div class="modal-footer no-margin">
+                            </div>
+                        </div>
+                    </div>
+                </div>
                
+                <div class="modal fade" id="fizzbuzz" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h1 class="modal-title" id="myModalLabel">Fizzbuzz</h1>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-6 input">
+                                            <h5>Enter two numbers between 1 and 100.</h5>
+                                            <form id="NumberInput" action="#" method="post">
+                                                <label for="fb-number1">Number:</label>
+                                                <input type="number" min="1" max="100" step="1" id="fb-number1" name="fb-number1" value="" />
+                                                <label for="fb-number2">Number:</label>
+                                                <input type="number" min="1" max="100" step="1" id="fb-number2" name="fb-number2" value="" />
+                                                <br>
+                                                <input type="submit" value="Calculate" class="fizzbuzz-btn">
+                                            </form>
+                                        </div>
+                                        <div class="col-md-6 output">
+                                            <h5>Fizzbuzz</h5>
+                                            <div id="fizzbuzzOutput">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-9 modal-code">
+                                            <pre class="brush: js">
+var numberInput1;
+var numberInput2;
+var fizzbuzzOutput;
+var numbers = [];
+for (var i = 1; i <= 100; i++) {
+    numbers.push(i);
+}
+function fizzbuzz(number1, number2, arr) {
+    for (var i = 0, arrLength = arr.length; i < arrLength; i++) {
+        if (arr[i] % number1 === 0 && arr[i] % number2 === 0) {
+            appendOutput("#fizzbuzzOutput", "FizzBuzz");
+        }
+        else if (arr[i] % number1 === 0) {
+            appendOutput("#fizzbuzzOutput", "Fizz");
+        }
+        else if (arr[i] % number2 === 0) {
+            appendOutput("#fizzbuzzOutput", "Buzz");
+        }
+        else {
+            appendOutput("#fizzbuzzOutput", arr[i]);
+        }
+        appendOutput("#fizzbuzzOutput", "<br>");
+    }
+}
+function getValues() {
+    numberInput1 = getValue("fb-number1");
+    numberInput2 = getValue("fb-number2");
+}
+function isValid(number) {
+    if (!isNaN(number) && number > 0 && number <= 100) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+function fizzbuzzProgram() {
+    clearOutput("#fizzbuzzOutput");
+    getValues();
+    if (isValid(numberInput1) && isValid(numberInput2)) {
+        fizzbuzz(numberInput1, numberInput2, numbers);
+    }
+    else {
+        appendOutput("#fizzbuzzOutput", "<p>There's been an error. Please make sure you've entered two numbers, each between 1 and 100!</p>")
+    }
+}
+runProgram(".fizzbuzz-btn", fizzbuzzProgram);
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-body col-sm-12">
+                            </div>
+                            <div class="modal-footer no-margin">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal fade" id="palindrome" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h1 class="modal-title" id="myModalLabel">Palindrome</h1>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-6 input">
+                                            <h4>Enter A Word</h4>
+                                            <form id="NumberInput" action="#" method="post">
+                                                <label for="word">Word:</label>
+                                                <input type="text" id="word" name="word" value="" />
+                                                <br>
+                                                <input type="submit" value="Reverse" class="palindrome-btn">
+                                            </form>
+                                        </div>
+                                        <div class="col-md-6 output">
+                                            <h4>Is It A Palindrome?</h4>
+                                            <div id="palindromeOutput">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-9 modal-code">
+                                            <pre class="brush: js">
+var wordInput;
+var wordOutput;
+function palindrome(word) {
+    var wordArr = word.split("");
+    var newArr = [];
+    for (var i = wordArr.length - 1; i >= 0; i--) {
+        newArr.push(wordArr[i]);
+    }
+    return newArr.join("");
+}
+function isPalindrome(word1, word2) {
+    if (word1 === word2) {
+        appendOutput("#palindromeOutput", "<p>It's a palindrome!</p>");
+    }
+    else {
+        appendOutput("#palindromeOutput", "<p>It's not a palindrome.</p>");
+    }
+}
+function palindromeProgram() {
+    clearOutput("#palindromeOutput");
+    wordInput = getValue("word");
+    wordOutput = palindrome(wordInput);
+    isPalindrome(wordInput, wordOutput);
+    appendOutput("#palindromeOutput", "<p>" + wordOutput + "</p>");
+}
+runProgram(".palindrome-btn", palindromeProgram);
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-body col-sm-12">
+                            </div>
+                            <div class="modal-footer no-margin">
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <div class="row" id="footer">
                     <div class="col-md-12 text-center">
@@ -190,9 +527,17 @@
     </div>
 
     <script src="js/vendor/jquery-1.10.2.min.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <!--<script src="js/min/plugins.min.js"></script>-->
+    <script src="js/min/bootstrap.min.js"></script>
+    <script src="scripts/SyntaxHighlighter/shCore.js"></script>
+    <script src="scripts/SyntaxHighlighter/shBrushJScript.js"></script>
+    <script src="js/plugins.min.js"></script>
     <script src="js/min/main.min.js"></script>
+    <script src="js/js-exercises.js"></script>
+
+
+    <script type="text/javascript">
+     SyntaxHighlighter.all()
+    </script>
 
 </body>
 </html>

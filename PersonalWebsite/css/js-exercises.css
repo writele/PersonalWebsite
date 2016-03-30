@@ -1,9 +1,22 @@
 ﻿.banner-bg {
   padding: 260px 80px;
   position: relative;
-  background: url("../img/1.jpg");
+  background: url("../img/computer.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   z-index: 2;
+}
+
+.content-wrapper {
+    background-color: #395451;
+    background-image: none;
+}
+
+.modal-code {
+    margin-top: 15px;
+}
+
+.col-md-6 {
+    padding: 0;
 }

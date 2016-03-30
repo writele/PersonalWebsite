@@ -94,7 +94,26 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\SyntaxHighlighter\shCore.css" />
+    <Content Include="Content\SyntaxHighlighter\shCoreDefault.css" />
+    <Content Include="Content\SyntaxHighlighter\shCoreDjango.css" />
+    <Content Include="Content\SyntaxHighlighter\shCoreEclipse.css" />
+    <Content Include="Content\SyntaxHighlighter\shCoreEmacs.css" />
+    <Content Include="Content\SyntaxHighlighter\shCoreFadeToGrey.css" />
+    <Content Include="Content\SyntaxHighlighter\shCoreMDUltra.css" />
+    <Content Include="Content\SyntaxHighlighter\shCoreMidnight.css" />
+    <Content Include="Content\SyntaxHighlighter\shCoreRDark.css" />
+    <Content Include="Content\SyntaxHighlighter\shThemeDefault.css" />
+    <Content Include="Content\SyntaxHighlighter\shThemeDjango.css" />
+    <Content Include="Content\SyntaxHighlighter\shThemeEclipse.css" />
+    <Content Include="Content\SyntaxHighlighter\shThemeEmacs.css" />
+    <Content Include="Content\SyntaxHighlighter\shThemeFadeToGrey.css" />
+    <Content Include="Content\SyntaxHighlighter\shThemeMDUltra.css" />
+    <Content Include="Content\SyntaxHighlighter\shThemeMidnight.css" />
+    <Content Include="Content\SyntaxHighlighter\shThemeRDark.css" />
     <Content Include="js-exercises.html" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\js-exercises.js" />
     <Content Include="js\smoothscroll.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -112,6 +131,34 @@
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="css\js-exercises.css" />
+    <Content Include="scripts\SyntaxHighlighter\shAutoloader.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushAppleScript.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushAS3.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushBash.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushColdFusion.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushCpp.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushCSharp.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushCss.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushDelphi.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushDiff.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushErlang.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushGroovy.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushJava.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushJavaFX.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushJScript.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushPerl.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushPhp.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushPlain.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushPowerShell.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushPython.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushRuby.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushSass.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushScala.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushSql.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushVb.js" />
+    <Content Include="scripts\SyntaxHighlighter\shBrushXml.js" />
+    <Content Include="scripts\SyntaxHighlighter\shCore.js" />
+    <Content Include="scripts\SyntaxHighlighter\shLegacy.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
