@@ -134,3 +134,7 @@ button.resume-link, input.resume-link {
 .resume-link i.fa {
     padding-right: 15px;
 }
+
+.col-md-6 {
+    padding: 0;
+}
