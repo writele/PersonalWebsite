@@ -94,6 +94,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="js-exercises.html" />
+    <Content Include="js\smoothscroll.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -109,17 +111,16 @@
     <Content Include="index.html" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="css\js-exercises.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="css\" />
     <Folder Include="fonts\" />
     <Folder Include="img\" />
     <Folder Include="javascript\" />
-    <Folder Include="js\" />
     <Folder Include="sass\" />
   </ItemGroup>
   <PropertyGroup>
