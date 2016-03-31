@@ -161,6 +161,7 @@
     <Content Include="fonts\Roboto-Regular-webfont.eot" />
     <Content Include="fonts\Roboto-Regular-webfont.ttf" />
     <Content Include="fonts\Roboto-Regular-webfont.woff" />
+    <Content Include="downloads\Palmer_Resume.pdf" />
     <None Include="Properties\PublishProfiles\epalmer %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\epalmer.pubxml" />
     <None Include="Web.Debug.config">

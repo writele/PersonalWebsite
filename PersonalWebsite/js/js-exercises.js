@@ -243,9 +243,11 @@ function isPalindrome(word1, word2) {
 }
 
 function isValidWord(word) {
-    var re = /^[a-z]/i;
-    var result = re.test(word);
-    if (result) {
+    var reTrue = /[a-z]/i;
+    var reFalse = /[0-9\W]/;
+    var letters = reTrue.test(word);
+    var numbers = reFalse.test(word);
+    if (letters && !numbers) {
         return true;
     }
     else {

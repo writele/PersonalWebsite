@@ -28,7 +28,7 @@
     <link href='https://fonts.googleapis.com/css?family=Merriweather:700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
 
-    <script src="jhttps://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
 <body>
     <!--[if lt IE 7]>
@@ -493,9 +493,11 @@ function isPalindrome(word1, word2) {
     }
 }
 function isValidWord(word) {
-    var re = /^[a-z]/i;
-    var result = re.test(word);
-    if (result) {
+    var reTrue = /[a-z]/i;
+    var reFalse = /[0-9\W]/;
+    var letters = reTrue.test(word);
+    var numbers = reFalse.test(word);
+    if (letters && !numbers) {
         return true;
     }
     else {
