@@ -102,7 +102,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="content-section">
-                                <p>Hover over an image below for more information about the exercise. Click on the title to view the exercise. These exercises share a few <a href="" data-toggle="modal" data-target="#shared">common functions</a>.</p>
+                                <p>Hover over an image below for more information about the exercise, and click on the title to view it. These exercises share a few <a href="" data-toggle="modal" data-target="#shared">common functions</a>.</p>
                             </div>
                         </div>
                     </div>
@@ -135,7 +135,7 @@
                                 <div class="project-hover">
                                     <div class="inside">
                                         <h5><a href="" data-toggle="modal" data-target="#fizzbuzz">FizzBuzz</a></h5>
-                                        <p>A program that accepts two numbers from the user. 1 to 1oo is then printed on the screen. For each number that is a multiple of the first number, "Fizz" is printed instead of the number. For each number that is a multiple of the second number , "Buzz" is printed. For numbers that are multiples of both numbers, "Fizzbuzz" is printed.</p>
+                                        <p>A program that accepts two numbers from the user. 1 to 100 is then printed on the screen. For each number that is a multiple of the first number, "Fizz" is printed instead of the number. For each number that is a multiple of the second number , "Buzz" is printed. For numbers that are multiples of both numbers, "FizzBuzz" is printed.</p>
                                     </div>
                                 </div>
                             </div>
@@ -163,24 +163,24 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-6 input">
-                                            <h4>Enter Some Numbers</h4>
+                                            <h4>Enter some numbers.</h4>
                                             <form id="NumberInput" action="#" method="post">
-                                                <label for="number1">Number:</label>
+                                                <label for="number1">Number :</label>
                                                 <input type="number" id="number1" name="number1" value="" />
                                                 <br />
-                                                <label for="number2">Number:</label>
+                                                <label for="number2">Number :</label>
                                                 <input type="number" id="number2" name="number2" value="" />
                                                 <br />
-                                                <label for="number3">Number:</label>
+                                                <label for="number3">Number :</label>
                                                 <input type="number" id="number3" name="number3" value="" />
                                                 <br />
-                                                <label for="number4">Number:</label>
+                                                <label for="number4">Number :</label>
                                                 <input type="number" id="number4" name="number4" value="" />
                                                 <br />
-                                                <label for="number5">Number:</label>
+                                                <label for="number5">Number :</label>
                                                 <input type="number" id="number5" name="number5" value="" />
                                                 <br>
-                                                <input type="submit" value="Calculate" class="statistics-btn">
+                                                <input type="submit" value="Calculate" class="statistics-btn btn resume-link">
                                             </form>
                                         </div>
                                         <div class="col-md-6 output">
@@ -190,7 +190,7 @@
                                             <p>Mean: <span id="mean"></span></p>
                                             <p>Sum: <span id="sum"></span></p>
                                             <p>Product: <span id="product"></span></p>
-                                            <p><span id="error"></span></p>
+                                            <p><span class="error"></span></p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -305,21 +305,21 @@ runProgram(".statistics-btn", statisticsProgram);
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                <h1 class="modal-title" id="myModalLabel">      </h1>
+                                <h1 class="modal-title" id="myModalLabel">Factorial Calculator</h1>
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-6 input">
-                                            <h4>Enter A Number</h4>
+                                            <h4>Enter a number.</h4>
                                             <form id="NumberInput" action="#" method="post">
-                                                <label for="fac-number">Number:</label>
+                                                <label for="fac-number">Number :</label>
                                                 <input type="number" id="fac-number" name="fac-number" value="" />
                                                 <br>
-                                                <input type="submit" value="Calculate" class="factorial-btn">
+                                                <input type="submit" value="Calculate" class="factorial-btn btn resume-link">
                                             </form>
                                         </div>
                                         <div class="col-md-6 output">
                                             <h4>Factorial</h4>
-                                            <p id="factorialOutput">
+                                            <p id="factorialOutput" class="error">
                                             </p>
                                         </div>
                                     </div>
@@ -336,7 +336,7 @@ function factorialize(factorial) {
     return result;
 }
 function factorialProgram() {
-    clearOutput("p#factorialOutput");
+    clearOutput("p.error");
     factorialInput = getValue("number1");
     factorialOutput = factorialize(factorialInput);
     if (isValid(factorialInput)) {
@@ -365,23 +365,23 @@ runProgram(".factorial-btn", factorialProgram);
                         <div class="modal-content">
                             <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                <h1 class="modal-title" id="myModalLabel">Fizzbuzz</h1>
+                                <h1 class="modal-title" id="myModalLabel">FizzBuzz</h1>
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-6 input">
-                                            <h5>Enter two numbers between 1 and 100.</h5>
+                                            <h4>Enter two numbers, each between 1 and 100.</h4>
                                             <form id="NumberInput" action="#" method="post">
-                                                <label for="fb-number1">Number:</label>
+                                                <label for="fb-number1">Number :</label>
                                                 <input type="number" min="1" max="100" step="1" id="fb-number1" name="fb-number1" value="" />
-                                                <label for="fb-number2">Number:</label>
+                                                <label for="fb-number2">Number :</label>
                                                 <input type="number" min="1" max="100" step="1" id="fb-number2" name="fb-number2" value="" />
                                                 <br>
-                                                <input type="submit" value="Calculate" class="fizzbuzz-btn">
+                                                <input type="submit" value="Calculate" class="fizzbuzz-btn btn resume-link">
                                             </form>
                                         </div>
                                         <div class="col-md-6 output">
-                                            <h5>Fizzbuzz</h5>
-                                            <div id="fizzbuzzOutput">
+                                            <h4>Fizzbuzz</h4>
+                                            <div id="fizzbuzzOutput" class="error">
                                             </div>
                                         </div>
                                     </div>
@@ -457,17 +457,17 @@ runProgram(".fizzbuzz-btn", fizzbuzzProgram);
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-6 input">
-                                            <h4>Enter A Word</h4>
+                                            <h4>Enter a word.</h4>
                                             <form id="NumberInput" action="#" method="post">
                                                 <label for="word">Word:</label>
                                                 <input type="text" id="word" name="word" value="" />
                                                 <br>
-                                                <input type="submit" value="Reverse" class="palindrome-btn">
+                                                <input type="submit" value="Reverse" class="palindrome-btn btn resume-link">
                                             </form>
                                         </div>
                                         <div class="col-md-6 output">
                                             <h4>Is It A Palindrome?</h4>
-                                            <div id="palindromeOutput">
+                                            <div id="palindromeOutput" class="error">
                                             </div>
                                         </div>
                                     </div>

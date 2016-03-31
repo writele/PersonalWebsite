@@ -75,7 +75,7 @@ h4.widget-title {
     padding: 0 5px;
 }
 
-.social-icons span {
+.fa span {
     margin-left: -9999px;
 }
 
@@ -137,4 +137,15 @@ button.resume-link, input.resume-link {
 
 .col-md-6 {
     padding: 0;
+}
+
+/* PORTFOLIO */
+.inside i.fa {
+    padding: 10px 11px;
+    color: #3B8686;
+    font-size: 1.2em;
+}
+
+.inside a:hover i.fa {
+    color: #0B486B;
 }
