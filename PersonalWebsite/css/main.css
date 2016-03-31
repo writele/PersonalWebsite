@@ -135,17 +135,28 @@ button.resume-link, input.resume-link {
     padding-right: 15px;
 }
 
-.col-md-6 {
-    padding: 0;
+/* PORTFOLIO */
+.project-hover {
+     font-family: font-family: "Roboto", Arial, sans-serif;
+     font-size: 1.1em;
 }
 
-/* PORTFOLIO */
+.project-hover h5 a {
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #3B8686;
+}
+
 .inside i.fa {
     padding: 10px 11px;
     color: #3B8686;
     font-size: 1.2em;
 }
 
-.inside a:hover i.fa {
-    color: #0B486B;
+.inside a:hover i.fa, .project-hover h5 a:hover {
+    color: #6AA285;
+}
+
+.col-md-6, .col-lg-6 {
+    padding: 0;
 }

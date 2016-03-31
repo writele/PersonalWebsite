@@ -111,14 +111,58 @@
     <Content Include="Content\SyntaxHighlighter\shThemeMDUltra.css" />
     <Content Include="Content\SyntaxHighlighter\shThemeMidnight.css" />
     <Content Include="Content\SyntaxHighlighter\shThemeRDark.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\normalize.css" />
+    <Content Include="css\owl-carousel.css" />
+    <Content Include="css\templatemo-style.css" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\Roboto-Bold-webfont.svg" />
+    <Content Include="fonts\Roboto-Light-webfont.svg" />
+    <Content Include="fonts\Roboto-Regular-webfont.svg" />
+    <Content Include="img\about-img.jpg" />
+    <Content Include="img\about.jpg" />
+    <Content Include="img\computer.jpg" />
+    <Content Include="img\js-exercise1.jpg" />
+    <Content Include="img\js-exercise2.jpg" />
+    <Content Include="img\js-exercise3.jpg" />
+    <Content Include="img\js-exercise4.jpg" />
+    <Content Include="img\portfolio1.jpg" />
+    <Content Include="img\portfolio2.jpg" />
+    <Content Include="img\portfolio3.jpg" />
+    <Content Include="img\portfolio4.jpg" />
+    <Content Include="img\portfolio5.jpg" />
+    <Content Include="img\portfolio6.jpg" />
+    <Content Include="img\profile.jpg" />
     <Content Include="js-exercises.html" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\js-exercises.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\min\bootstrap.min.js" />
+    <Content Include="js\min\main.min.js" />
+    <Content Include="js\min\plugins.min.js" />
+    <Content Include="js\plugins.js" />
     <Content Include="js\smoothscroll.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="fonts\Roboto-Bold-webfont.eot" />
+    <Content Include="fonts\Roboto-Bold-webfont.ttf" />
+    <Content Include="fonts\Roboto-Bold-webfont.woff" />
+    <Content Include="fonts\Roboto-Light-webfont.eot" />
+    <Content Include="fonts\Roboto-Light-webfont.ttf" />
+    <Content Include="fonts\Roboto-Light-webfont.woff" />
+    <Content Include="fonts\Roboto-Regular-webfont.eot" />
+    <Content Include="fonts\Roboto-Regular-webfont.ttf" />
+    <Content Include="fonts\Roboto-Regular-webfont.woff" />
+    <None Include="Properties\PublishProfiles\epalmer %282%29.pubxml" />
+    <None Include="Properties\PublishProfiles\epalmer.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -165,10 +209,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="fonts\" />
-    <Folder Include="img\" />
     <Folder Include="javascript\" />
     <Folder Include="sass\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
