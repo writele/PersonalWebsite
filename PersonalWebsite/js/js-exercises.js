@@ -242,12 +242,29 @@ function isPalindrome(word1, word2) {
     }
 }
 
+function isValidWord(word) {
+    var re = /^[a-z]/i;
+    var result = re.test(word);
+    if (result) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
 function palindromeProgram() {
     clearOutput("#palindromeOutput");
     wordInput = getValue("word");
     wordOutput = palindrome(wordInput);
-    isPalindrome(wordInput, wordOutput);
-    appendOutput("#palindromeOutput", "<p>" + wordOutput + "</p>");
+    if (isValidWord(wordInput)) {
+        isPalindrome(wordInput, wordOutput);
+        appendOutput("#palindromeOutput", "<p>" + wordOutput + "</p>");
+    }
+    else {
+        appendOutput("#palindromeOutput", "<p>There's been an error. Please make sure you've entered valid text.</p>")
+    }
+    
 }
 
 runProgram(".palindrome-btn", palindromeProgram);
