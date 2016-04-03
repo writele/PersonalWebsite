@@ -136,7 +136,7 @@ button.resume-link, input.resume-link {
      font-size: 1.1em;
 }
 
-.project-hover h5 a {
+.project-hover h5 a, .inside i.fa {
     font-size: 1.2em;
     font-weight: 500;
     color: #3B8686;
@@ -144,8 +144,6 @@ button.resume-link, input.resume-link {
 
 .inside i.fa {
     padding: 10px 11px;
-    color: #3B8686;
-    font-size: 1.2em;
 }
 
 .inside a:hover i.fa, .project-hover h5 a:hover {
