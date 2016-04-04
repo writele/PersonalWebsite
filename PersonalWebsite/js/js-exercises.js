@@ -256,9 +256,9 @@ function palindromeProgram() {
     clearOutput("#palindromeOutput");
     wordInput = getValue("word").replace(/\s+/g, "");
     wordOutput = palindrome(wordInput);
-    if (isValidWord(wordInput)) {
+    if (isValidWord(wordOutput)) {
         isPalindrome(wordInput, wordOutput);
-        appendOutput("#palindromeOutput", "<p>" + wordOutput + "</p>");
+        appendOutput("#palindromeOutput", "<p>" + palindrome(getValue("word")) + "</p>");
     }
     else {
         appendOutput("#palindromeOutput", "<p>There's been an error. Please make sure you've entered valid text.</p>")
