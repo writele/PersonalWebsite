@@ -1,4 +1,5 @@
-﻿/* Shared Functions */
+﻿(function() {
+/* Shared Functions */
 function getValue(id) {
     var value = document.getElementById(id).value;
     return value;
@@ -112,6 +113,7 @@ function clearOutputNumbers() {
     clearOutput("span#mean");
     clearOutput("span#sum");
     clearOutput("span#product");
+    clearOutput("p#stat-error")
 }
 
 function appendOutputNumbers() {
@@ -131,7 +133,7 @@ function statisticsProgram() {
         appendOutputNumbers();
     }
     else {
-        appendOutput("span#error", "<p>There's been an error. Please make sure you've entered valid numbers.</p>")
+        appendOutput("p#stat-error", "<p>There's been an error. Please make sure you've entered valid numbers.</p>")
     }
     clearValues();
 }
@@ -169,25 +171,20 @@ runProgram(".factorial-btn", factorialProgram);
 var fbNumberInput1;
 var fbNumberInput2;
 var fizzbuzzOutput;
-var fbNumbers = [];
 
-for (var i = 1; i <= 100; i++) {
-    fbNumbers.push(i);
-}
-
-function fizzbuzz(number1, number2, arr) {
-    for (var i = 0, arrLength = arr.length; i < arrLength; i++) {
-        if (arr[i] % number1 === 0 && arr[i] % number2 === 0) {
+function fizzbuzz(number1, number2) {
+    for (var i = 1; i <= 100; i++) {
+        if (i % number1 === 0 && i % number2 === 0) {
             appendOutput("#fizzbuzzOutput", "FizzBuzz");
         }
-        else if (arr[i] % number1 === 0) {
+        else if (i % number1 === 0) {
             appendOutput("#fizzbuzzOutput", "Fizz");
         }
-        else if (arr[i] % number2 === 0) {
+        else if (i % number2 === 0) {
             appendOutput("#fizzbuzzOutput", "Buzz");
         }
         else {
-            appendOutput("#fizzbuzzOutput", arr[i]);
+            appendOutput("#fizzbuzzOutput", i);
         }
         appendOutput("#fizzbuzzOutput", "<br>");
     }
@@ -211,7 +208,7 @@ function fizzbuzzProgram() {
     clearOutput("#fizzbuzzOutput");
     getFBValues();
     if (isValidFB(fbNumberInput1) && isValidFB(fbNumberInput2)) {
-        fizzbuzz(fbNumberInput1, fbNumberInput2, fbNumbers);
+        fizzbuzz(fbNumberInput1, fbNumberInput2);
     }
     else {
         appendOutput("#fizzbuzzOutput", "<p>There's been an error. Please make sure you've entered two numbers, each between 1 and 100!</p>")
@@ -257,7 +254,7 @@ function isValidWord(word) {
 
 function palindromeProgram() {
     clearOutput("#palindromeOutput");
-    wordInput = getValue("word");
+    wordInput = getValue("word").replace(/\s+/g, "");
     wordOutput = palindrome(wordInput);
     if (isValidWord(wordInput)) {
         isPalindrome(wordInput, wordOutput);
@@ -270,4 +267,4 @@ function palindromeProgram() {
 }
 
 runProgram(".palindrome-btn", palindromeProgram);
-
+})();
