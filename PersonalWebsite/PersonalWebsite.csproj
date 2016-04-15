@@ -127,7 +127,12 @@
     <Content Include="freelance.html" />
     <Content Include="img\about-img.jpg" />
     <Content Include="img\about.jpg" />
+    <Content Include="img\coffee.jpg" />
     <Content Include="img\computer.jpg" />
+    <Content Include="img\freelance1.jpg" />
+    <Content Include="img\freelance2.jpg" />
+    <Content Include="img\freelance3.jpg" />
+    <Content Include="img\freelance4.jpg" />
     <Content Include="img\js-exercise1.jpg" />
     <Content Include="img\js-exercise2.jpg" />
     <Content Include="img\js-exercise3.jpg" />
