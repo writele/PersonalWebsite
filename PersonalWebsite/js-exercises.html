@@ -22,8 +22,7 @@
     <link rel="stylesheet" href="css/templatemo-style.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/js-exercises.css">
-    <link href="Content/SyntaxHighlighter/shCore.css" rel="stylesheet" />
-    <link href="Content/SyntaxHighlighter/shThemeDefault.css" rel="stylesheet" />
+    <link href="css/prism.css" rel="stylesheet" />
 
     <link href='https://fonts.googleapis.com/css?family=Merriweather:700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css'>
@@ -50,16 +49,26 @@
             <a href="#" class="toggle-menu">Menu</a>
             <div class="main-navigation responsive-menu">
                 <ul class="navigation">
-                    <li><a href="index.html"><i class="fa fa-globe"></i>Welcome</a></li>
-                    <li><a href="index.html#about"><i class="fa fa-pencil"></i>About</a></li>
-                    <li><a href="index.html#projects"><i class="fa fa-desktop"></i>Portfolio</a></li>
-                    <li><a href="index.html#resume"><i class="fa fa-file-o"></i>Resume</a></li>
-                    <li><a href="index.html#contact"><i class="fa fa-comment"></i>Contact</a></li>
+                    <li>
+                        <a href="index.html#top"><i class="fa fa-globe"></i>Welcome</a>
+                    </li>
+                    <li>
+                        <a href="index.html#about"><i class="fa fa-book"></i>About</a>
+                    </li>
+                    <li>
+                        <a href="index.html#projects"><i class="fa fa-desktop"></i>Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="index.html#resume"><i class="fa fa-file-o"></i>Resume</a>
+                    </li>
+                    <li>
+                        <a href="https://elepalmer-blog.azurewebsites.net/Home/Contact"><i class="fa fa-comment"></i>Contact</a>
+                    </li>
                     <li>
                         <a href="freelance.html" class="external-link"><i class="fa fa-photo"></i>Freelancing</a>
                     </li>
                     <li>
-                        <a href="blog.html" class="external-link"><i class="fa fa-pencil"></i>Blog</a>
+                        <a href="https://ele-blog.azurewebsites.net" class="external-link"><i class="fa fa-pencil"></i>Blog</a>
                     </li>
                 </ul>
             </div>
@@ -74,16 +83,26 @@
         </div> <!-- top-section -->
         <div class="main-navigation">
             <ul class="navigation">
-                <li><a href="index.html"><i class="fa fa-globe"></i>Welcome</a></li>
-                <li><a href="index.html#about"><i class="fa fa-pencil"></i>About</a></li>
-                <li><a href="index.html#projects"><i class="fa fa-desktop"></i>Portfolio</a></li>
-                <li><a href="index.html#resume"><i class="fa fa-file-o"></i>Resume</a></li>
-                <li><a href="index.html#contact"><i class="fa fa-comment"></i>Contact</a></li>
+                <li>
+                    <a href="index.html#top"><i class="fa fa-globe"></i>Welcome</a>
+                </li>
+                <li>
+                    <a href="index.html#about"><i class="fa fa-book"></i>About</a>
+                </li>
+                <li>
+                    <a href="index.html#projects"><i class="fa fa-desktop"></i>Portfolio</a>
+                </li>
+                <li>
+                    <a href="index.html#resume"><i class="fa fa-file-o"></i>Resume</a>
+                </li>
+                <li>
+                    <a href="https://elepalmer-blog.azurewebsites.net/Home/Contact"><i class="fa fa-comment"></i>Contact</a>
+                </li>
                 <li>
                     <a href="freelance.html" class="external-link"><i class="fa fa-photo"></i>Freelancing</a>
                 </li>
                 <li>
-                    <a href="blog.html" class="external-link"><i class="fa fa-pencil"></i>Blog</a>
+                    <a href="https://ele-blog.azurewebsites.net" class="external-link"><i class="fa fa-pencil"></i>Blog</a>
                 </li>
             </ul>
         </div> <!-- .main-navigation -->
@@ -549,7 +568,7 @@ runProgram(".palindrome-btn", palindromeProgram);
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-9 modal-code">
-                                            <pre class="brush: js">
+                                            <pre><code class="language-javascript">
 function getValue(id) {
     var value = document.getElementById(id).value;
     return value;
@@ -574,7 +593,7 @@ function runProgram(element, program) {
         program();
     });
 }
-                                            </pre>
+                                            </code></pre>
                                         </div>
                                     </div>
                                 </div>
@@ -600,16 +619,11 @@ function runProgram(element, program) {
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <script src="js/min/bootstrap.min.js"></script>
-    <script src="scripts/SyntaxHighlighter/shCore.js"></script>
-    <script src="scripts/SyntaxHighlighter/shBrushJScript.js"></script>
+    <script src="scripts/prism.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
     <script src="js/js-exercises.js"></script>
 
-
-    <script type="text/javascript">
-     SyntaxHighlighter.all()
-    </script>
 
 </body>
 </html>
